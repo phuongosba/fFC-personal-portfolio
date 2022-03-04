@@ -1,0 +1,236 @@
+/* reset */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: 'Poppins', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* navbar */
+#nav-bar {
+    background-color: #be3144;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+}
+
+#nav-bar .nav-items {
+    display: flex;
+    justify-content: flex-end;
+    list-style: none;
+    padding: 1rem 0;
+    margin: 0 1rem;
+}
+
+.nav-items .nav-link {
+    color: white;
+    text-decoration: none;
+    font-size: 1.5rem;
+    padding: 0 2rem;
+    font-weight: 400;
+}
+
+/* welcome section */
+
+#welcome-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background-color: #000;
+    background-image: linear-gradient(62deg, #3a3d40 0%, #181719 100%);
+}
+
+.welcome-heading {
+    font-size: 4rem;
+    font-weight: 700;
+    color: #f0f0f0;
+    text-align: center;
+}
+
+#welcome-section p {
+    color: #be3144;
+    font-style: italic;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+/* projects */
+
+#projects {
+    text-align: center;
+    background-color: #45567d;
+    padding-bottom: 6rem;
+}
+
+.projects-section-header {
+    padding-top: 6rem;
+    max-width: 800px;
+    color: #f0f0f0;
+    font-size: 3rem;
+    margin: 0 auto 6rem auto;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    column-gap: 2rem;
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    margin-bottom: 3px;
+    justify-content: center;
+}
+
+.project-card {
+    background-color: #303841;
+    margin-bottom: 4rem;
+}
+
+.project-image {
+    height: calc(100% - 2rem);
+    width: 100%;
+    object-fit: cover;
+}
+
+.project-title {
+    font-size: 1.25rem;
+    background-color: #303841;
+    padding: 1rem 0;
+    color: #f0f0f0;
+}
+
+.project-card .code {
+    display: none;
+}
+
+.project-card:hover .code {
+    display: inline;
+    color: #be3144;
+}
+
+.projects-section .btn {
+    font-size: 1.5rem;
+    background-color: #303841;
+    color: #f0f0f0;
+    padding: 1rem;
+    margin: 4rem auto;
+    border-radius: 2px;
+    margin-top: 7rem;
+    transition: 0.5s ease-in-out;
+}
+
+.projects-section .btn:hover {
+    background-color: #be3144;
+}
+
+.projects-section .btn:hover i {
+    transform: translateX(0.2rem);
+}
+
+.contact-section {
+    background-color: #303841;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    text-align: center;
+    color: #f0f0f0;
+}
+
+.contact-section h2 {
+    font-size: 4rem;
+}
+
+.contact-section p {
+    font-style: italic;
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+}
+
+.contact-items {
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    max-width: 980px;
+    margin-top: 4rem;
+    flex-wrap: wrap;
+}
+
+.contact-details {
+    color: #f0f0f0;
+    padding: 0 1rem;
+    transition: tranform 200ms ease-in;
+}
+
+.contact-details:hover {
+    transform: translateY(5px);
+}
+
+#footer {
+    background-color: #303841;
+    border-top: 2px solid #be3144;
+    display: flex;
+    padding: 2rem;
+    justify-content: space-evenly;
+    align-items: center;
+    color: #f0f0f0;
+    font-weight: 400;
+}
+
+#footer a {
+    color: #f0f0f0;
+}
+
+@media (max-width: 1280px) {
+    .projects-grid {
+        margin-left: 1rem;
+        margin-right: 1rem;
+        width: calc(100% - 2rem);
+    }
+}
+
+@media (max-width: 420px) {
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+
+    #nav-bar .nav-items {
+        justify-content: space-around;
+    }
+    
+    .nav-items .nav-link {
+        font-size: 1rem;
+    }
+    
+    .projects-section-header {
+        font-size: 2rem;
+        max-width: 80%;
+    }
+
+    #footer {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    #footer > p {
+        margin: 2rem;
+    }
+
+}
+
